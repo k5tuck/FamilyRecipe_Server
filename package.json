@@ -1,0 +1,40 @@
+{
+  "name": "familyrecipe_server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "db:create": "npx sequelize db:create",
+    "db:migrate": "npx sequelize db:migrate",
+    "db:seed": "npx sequelize db:seed:all",
+    "db:make": "npx sequelize db:create && npx sequelize db:migrate && npx sequelize db:seed:all",
+    "db:reset": "npx sequelize db:drop && npx sequelize db:create && npx sequelize db:migrate && npx sequelize db:seed:all",
+    "dev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "sessions/*"
+    ]
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "helmet": "^4.4.1",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.2",
+    "pg": "^8.5.1",
+    "pg-hstore": "^2.3.3",
+    "sequelize": "^6.5.0",
+    "session-file-store": "^1.5.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7",
+    "sequelize-cli": "^6.2.0"
+  }
+}
